@@ -14,20 +14,20 @@ lang: en
 
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone:
+timezone: India/kolkata
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy                          # the main title
+title: Kryolite Security                         # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: Eat.Sleep.Hack.Repeat   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  this is my description . A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'surya-dev-singh.github.io'
 
 github:
   username: github_username             # change to your github username
@@ -81,7 +81,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: "https://yt3.ggpht.com/WHN7NDldyc1LzHNCTWSpfR0Kcor9FKM6SuVoX-B2SAZK5QShHVMv84FmFNW3fCp1udtotXicMg=s88-c-k-c0x00ffffff-no-rj-mo"
 
 # boolean type, the global switch for ToC in posts.
 toc: true
