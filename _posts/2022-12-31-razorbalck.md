@@ -1,7 +1,7 @@
 ---
 title: Razor Black
 date: 2022-01-01 12:00:00 -500
-categories: [CTF Writeups]
+categories: [CTF Writeups,tryhackme]
 tags: [privesc,active directory]
 ---
 
