@@ -1,6 +1,9 @@
-# Tryhackme Blaster
-
-Tags: CVE-2019, Privesc, Windows, hhupd
+---
+title: Tryhackme Blaster
+date: 2022-01-01 12:00:00 -500
+categories: [CTF Writeups]
+tags: [privesc,hhupd,windows,privesc]
+---
 
 # 🔭Information Gathering
 
