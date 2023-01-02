@@ -1,5 +1,9 @@
-
-## Enterprise — Tryhackme Writeup
+---
+title: Enterprise — Tryhackme Writeup
+date: 2022-01-01 12:00:00 -500
+categories: [CTF writeups,tryhackme]
+tags: [activedirectory]
+---
 
 You just landed in an internal network. You scan the network and there’s only the Domain Controller
 
