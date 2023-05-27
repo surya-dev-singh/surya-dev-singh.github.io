@@ -8,10 +8,7 @@ tags: [activedirectory]
 You just landed in an internal network. You scan the network and there’s only the Domain Controller
 
 ![](https://cdn-images-1.medium.com/max/3840/1*B-YgfwR0Zllf3sR8CmNtVA.png)
-![](/assets/img/bio-image.jpeg)
 
-
-this is test
 ## ✅ Information Gathering
 
 ### Rustscan
