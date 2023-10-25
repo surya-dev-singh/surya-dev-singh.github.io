@@ -1,6 +1,6 @@
 ---
 title: Firefox Cache Smuggling Attack
-date: 2023-10-25 12:00:00 -500
+date: 2022-01-01 12:00:00 -500
 categories:
   - red teaming
   - initial access
