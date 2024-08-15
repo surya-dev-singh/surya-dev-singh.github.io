@@ -390,7 +390,7 @@ please support me by following me on medium and other social platforms:
 
 [https://twitter.com/kryolite_secure](https://twitter.com/kryolite_secure)/
 
-https://[www.instagram.com/kryolite_security/](http://www.instagram.com/kryolite_security/)
+https://[www.instagram.com/kryolite_security/](https://www.instagram.com/kryolite_security/)
 
 [https://github.com/surya-dev-singh/](https://github.com/surya-dev-singh/)
 
