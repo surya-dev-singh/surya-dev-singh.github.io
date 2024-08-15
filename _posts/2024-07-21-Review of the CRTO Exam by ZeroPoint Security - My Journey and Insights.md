@@ -55,9 +55,9 @@ For more detail about the course, you can visit [here](https://training.zeropoi
 
 ![](/assets/img/CRTO-Review/price.png)
 
-# The Exam Day Adventure: A Tale of Conquering Machines
+# The Exam Day Adventure:
 
-I was a bit nervous, but I finally scheduled my exam for July 6th at 11:30 AM IST.
+It all began with a range of mixed emotions. Anxious, excited, nervous, doubtful .......! but I finally scheduled my exam for July 6th at 11:30 AM IST.
 
 My strategy was simple: 12 hours a day, over 4 days, wrapping up by July 9th.
 
